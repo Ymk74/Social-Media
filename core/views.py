@@ -11,6 +11,7 @@ from . models import Profile
 def index(request):
     return render(request , 'index.html')
 
+@login_required(login_url='signin')
 def upload(request):
     return HttpResponse('<h1> upload view </h1>')
 
