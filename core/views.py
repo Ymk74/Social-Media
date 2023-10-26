@@ -12,6 +12,10 @@ def index(request):
     return render(request , 'index.html')
 
 
+def settings(request):
+    return render(request, 'setting.html')
+
+
 def signup(request):
 
     if request.method == 'POST':
