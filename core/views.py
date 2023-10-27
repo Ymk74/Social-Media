@@ -18,7 +18,7 @@ def upload(request):
     if request.method == 'POST':
         user = request.user.username
         image = request.FILES.get('image_upload')
-        caption = request.POST.get('caption')
+        caption = request.POST['caption']
 
         new_post = Post.objects.create(user=user, image=image, caption=caption)
         new_post.save()
