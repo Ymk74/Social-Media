@@ -49,7 +49,8 @@ def like_post(request):
         post.save()
         return redirect('/')
 
-def profile(request):
+@login_required(login_url='signin')
+def profile(request, pk):
     return render(request,'profile.html')
 
 @login_required(login_url='signin')
