@@ -45,6 +45,7 @@ def upload(request):
     else:
         return redirect('/')
 
+@login_required(login_url='signin')
 def search(request):
     pass
 
